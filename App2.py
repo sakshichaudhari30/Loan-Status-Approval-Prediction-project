@@ -11,7 +11,7 @@ model = joblib.load("model.joblib")
 
 @flask_app.route("/")
 def Home():
-    return render_template("index2.html")
+    return render_template("index3.html")
 
 # Input features should be considered and we will write the code on what should happen when predict is clicked
 @flask_app.route("/predict",methods=["POST"])
@@ -54,7 +54,7 @@ def predict():
         op = "Loan Status is Approved"
     else:
         op = "Loan Status is Not Approved"
-    return render_template("index2.html",prediction_text=op)
+    return render_template("index3.html",prediction_text=op)
 
 if __name__=="__main__":
     flask_app.run(debug=True)
